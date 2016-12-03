@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+		@font-face{
+ font-family: c;
+       src: url(../img/log/NotoSansKR-Medium.otf);
+      }
+	
+
+body{
+
+  background:#fff;
+ font-family: c;
+}
+
+
+
+/* login form display */
+#login{
+  width:400px;
+  margin:0 auto;
+  margin-top:20%;
+ 
+/*  left:160%;
+  top:50%;*/
+  
+}
+
+
+#login h1{
+  
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#36D7B6;
+   font-family: c;
+   text-transform:capitalize;
+}
+/*form style */
+form{
+
+  background:#fff;
+  padding:5% 5% 5% 5%;
+}
+/*email, password input  */
+input[type="email"],input[type="password"]{
+  width:90%;
+  background:#36D7B6;
+  margin-bottom:5px;
+  border:1px solid #36D7B6;
+  padding:4%;
+  font-size:95%;
+  color:#fff;
+  outline:none;
+  border-radius:7px;
+   font-family: c;
+
+}
+  ::-webkit-input-placeholder{ 
+   color: #fff;
+ }
+
+
+/*log in button  */
+input[type="submit"]
+{
+  width:98%;
+  background:#3b5998;
+  border-color:#3b5998;
+  padding:5%;
+  margin-bottom: 5px;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  border:none;
+  border-radius:7px;
+    font-family: c;
+}
+input[type="button"]{
+  width:48%;
+  background:#d7d7d7;
+  padding:5%;
+  margin: 2%;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  border-color:#d7d7d7;
+  float:left;
+  margin:2px 2px 15px 2px;
+  border:none;
+  border-radius:7px;
+   font-family: c;
+}
+input[type="button"]:hover{
+  width:48%;
+  background:#36D7B6;
+  padding:5%;
+  margin: 2%;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  border-color:#36D7B6;
+  float:left;
+  margin:2px 2px 15px 2px;
+  
+}
+.forgot{
+  margin-left:220px;
+}
+.font {
+
+  margin-bottom:5%;
+  /* width:500px;*/
+   background-color:green;
+   position:absolute;
+}
+.facebook-login{
+   text-transform:capitalize;
+    font-family: c;
+    background:#3B579D;
+    height:50px;
+    float:left;
+    width:350px;
+    border-radius:7px;
+    
+    
+}
+.facebook-logo{
+width:20px;
+margin-top:14px;
+vertical-align:middle;
+text-align:center;
+margin-right:60px;
+
+}
+.facebook-button{
+width:500px;
+color:#fff;
+font-family:c;
+margin-left:10px;
+
+}
+.facebook-font{
+ 
+}

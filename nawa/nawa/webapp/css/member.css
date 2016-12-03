@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+
+
+
+.profile_title h2 {
+	color: #33CCCC;
+	text-align: center;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+
+
+#profile_userinfo {
+	text-align: center;
+	margin: 30px;
+}
+
+#profile_userinfo .user_pic {
+}
+#profile_userinfo .user_pic img {
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+}
+
+#profile_userinfo .user_name {
+	font-size: 1.7em;
+	margin: 10px;
+}
+#profile_userinfo .user_name .edit_button {
+	font-size: 0.8em;
+	color: #B7B7B7;
+	cursor: pointer;
+}
+#profile_userinfo .user_email {
+	font-size: 0.8em;
+}
+#profile_userinfo .user_email img {vertical-align: text-top;}
+#profile_userinfo .user_email span {}
+#profile_userinfo .action_area {
+	margin: 20px;
+}
+
+
+
+
+#user_activity {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 60px;
+	width: 944px;
+	background-color: #fff;
+}
+
+
+
+
+
+#edit_profile_form {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	padding: 70px;
+	width: 355px;
+	height: 390px;
+	background-color: #fff;
+}
+
+#edit_profile_form .upload {
+	margin: 0 auto;
+	margin-bottom: 40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+	background: #fff url('/img/userpic/userpic120_1.png') no-repeat;
+	z-index: 1;
+}
+#edit_profile_form .upload:hover:before {
+	content: '';
+	width: 60px;
+	height: 20px;
+	background: #fff url('/img/button_upload60.png') no-repeat;
+	z-index: 2;
+}
+#edit_profile_form .upload:hover:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 120px;
+	height: 120px;
+	background-color: #000;
+	opacity: 0.4;
+	border-radius: 60px;
+	z-index: 1;
+}
+
+#edit_profile_form > label {
+	clear: both;
+	float: left;
+	margin-top: 15px;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+#edit_profile_form > input {
+	float: right;
+	margin-top: 15px;
+	padding: 0 10px;
+	width: 230px;
+	height: 35px;
+	color: #AFAFAF;
+	text-align: right;
+	background-color: #E0E0E0;
+	border: 0;
+	border-radius: 3px;
+}
+
+#edit_profile_form .select_gender {
+	clear: both;
+	display: block;
+	padding-top: 15px;
+	height: 35px;
+	line-height: 35px;
+}
+#edit_profile_form .select_gender_label {
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+
+#edit_profile_action_area {
+	margin: 60px;
+	text-align: center;
+}
+#edit_profile_action_area button:first-child {
+	margin-right: 20px;
+}

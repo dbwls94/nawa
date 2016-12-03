@@ -1,0 +1,198 @@
+
+
+
+.profile_title {
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 944px;
+}
+
+.profile_title h2 {
+	color: #33CCCC;
+	text-align: center;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.profile_wrap {
+	margin: 0 auto;
+	width: 944px;
+}
+
+
+#profile_userinfo {
+	text-align: center;
+	margin: 30px;
+}
+
+#profile_userinfo .user_pic {
+}
+#profile_userinfo .user_pic img {
+	width: 120px;
+	height: 120px;
+}
+
+#profile_userinfo .user_name {
+	font-size: 1.7em;
+	margin: 10px;
+}
+#profile_userinfo .user_name .edit_button {
+	font-size: 0.8em;
+	color: #B7B7B7;
+	cursor: pointer;
+}
+#profile_userinfo .user_email {
+	font-size: 0.8em;
+}
+#profile_userinfo .action_area {
+	margin: 20px;
+}
+
+
+
+#user_activity {
+	position: relative;
+	display: block;
+	background-color: #fff;
+}
+
+#user_activity .tab_title_list {
+	width: 944px;
+	height: 80px;
+}
+#user_activity .tab_title_list li {
+	width: 314px;
+	height: 80px;
+}
+
+
+
+
+
+
+
+
+.edit_profile_title {
+	margin: 0 auto;
+	margin-top: 250px;
+	width: 944px;
+	text-align: center;
+}
+
+
+.edit_profile_wrap {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	margin-top: 65px;
+	width: 495px;
+	height: 515px;
+	background-color: #fff;
+}
+.edit_profile_wrap form {
+	padding-top: 30px;
+}
+
+
+
+#edit_profile_form div.upload {
+	margin: 40px auto;
+    width: 120px;
+    height: 120px;
+    background: url('/imgsample/profile_pic_upload.png') no-repeat;
+    background-size: 120px 120px;
+    overflow: hidden;
+}
+
+#edit_profile_form div.upload input {
+    display: block !important;
+    width: 120px !important;
+    height: 120px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+}
+
+
+
+#edit_profile_form {
+	margin: 0 auto;
+	width: 355px;
+}
+
+#edit_profile_form > label {
+	clear: both;
+	float: left;
+	margin-top: 15px;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+#edit_profile_form > input {
+	float: right;
+	margin-top: 15px;
+	padding: 0 10px;
+	width: 230px;
+	height: 35px;
+	color: #AFAFAF;
+	text-align: right;
+	background-color: #E0E0E0;
+	border: 0;
+	border-radius: 3px;
+}
+
+
+#edit_profile_select_gender {
+	clear: both;
+	display: block;
+	padding-top: 15px;
+	height: 35px;
+	line-height: 35px;
+}
+#edit_profile_select_gender .select_gender_label {
+	float: left;
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+#edit_profile_select_gender .select_gender_content {
+	float: right;
+	height: 35px;
+	line-height: 35px;
+}
+#edit_profile_select_gender .select_gender_content div {
+	float: left;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+#edit_profile_gender_male {
+    background: url('/imgsample/male.png');
+}
+#edit_profile_gender_male:hover, #edit_profile_gender_male.on {
+    background: url('/imgsample/male_on.png');
+}
+#edit_profile_gender_female {
+    background: url('/imgsample/female.png');
+}
+#edit_profile_gender_female:hover, #edit_profile_gender_female.on {
+    background: url('/imgsample/female_on.png');
+}
+
+#edit_profile_btn {
+	width: 85px;
+}
+
+
+
+
+
+#edit_profile_action_area {
+	margin: 60px;
+	text-align: center;
+}
+#edit_profile_action_area button:first-child {
+	margin-right: 20px;
+}

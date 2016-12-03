@@ -1,0 +1,5 @@
+driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/nawa_test?characterEncoding=UTF-8
+username=nawa
+password=nawadkagh
+database=nawa_test

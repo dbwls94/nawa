@@ -1,0 +1,1063 @@
+@CHARSET "UTF-8";
+
+
+/*
+http://yuptogun.tistory.com/779
+*/
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('/css/NSKR500.woff') format('woff');
+}
+
+
+* {margin:0; padding:0; font-family: 'Noto Sans', '맑은 고딕', Helvetica; color: #7c7c7c;}
+body{background-color:#F2F2F2;}
+ul {height:100%;}
+li {list-style:none;}
+a {text-decoration:none;display:block;width:100%;height:100%;}
+h2, h3 {font-weight: normal;}
+.clear_blank {clear: both;text-align:center;}
+.off {display:none;}
+
+.close_btn {
+    position: absolute;
+    display: block;
+    top:0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    text-indent: -9999px;
+    font-size: 0;
+    background: url('/img/icon_close.png') 50% 50% no-repeat;    
+}
+
+#mask {
+    position:fixed;
+    display:none;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: #000;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    z-index: 9000;
+}
+
+/*
+
+상단 네비바 영역잡기.
+하단 영역 설정.
+공통 모듈 만들기.
+	레이어 : 흐린 배경 넣고 레이어 띄우기.
+	
+	선택 메뉴 하단 라인 : class="on" 적용 시 하단 border 주기.
+	 	
+	상단 탭 : 프로필, 프로젝트 관리 등
+	양식 : 회원가입, 프로젝트 생성 등
+	업로드 버튼 : 회원가입, 프로젝트 생성 등
+	버튼 : 참여하기, 참여중 등 
+	
+	회원사진 : 회원 사진 크기별 지정.
+	
+	회원카드 : 프로필, 프로젝트 멤버관리 등.
+	프로젝트 카드 : 프로필, 검색 등
+	
+	영역 카드 : 타이틀, 내용
+		
+
+
+
+
+ */
+ 
+ 
+ 
+ 
+
+
+.layer, #notification_wrap {
+display: none;
+}
+
+
+/***** 공용 모듈 - 버튼 */
+button {
+	padding: 0 10px;
+	height: 40px;
+	font-size: 1em;
+	color: #fff;
+	background-color: #33CCCC;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+button.type2 {
+	border: 2px solid #33CCCC;
+	background-color: #FFFFFF;
+	color: #33CCCC;
+}
+button.type2:hover {
+	background-color: #33CCCC;
+	color: #FFFFFF;
+}
+button.disable {
+	background-color: #CCCCCC;
+}
+button.type3 {
+	padding:0;
+	padding-top: 3px;
+	width: 30px;
+	background-color: #FFFFFF;
+}
+button.unfollow {
+	padding-left: 30px;
+	background: #33CCCC url('/img/icon_check.png') 5px 50% no-repeat;
+}
+button.follow {	
+	width: 50px;
+	text-indent: -9999px;
+	font-size: 0;
+	overflow: hidden;
+	color: #FFFFFF;
+	background: url('/img/icon_follow.png') 50% 50% no-repeat;
+}
+
+/* 추가하자 */
+/* 왼쪽에 아이콘 들어간 버튼 */
+/* 그림으로만 된 버튼 */
+
+button.icon_left {
+
+}
+
+
+button.normal {
+	padding: 0;
+	height: auto;
+	color: #7C7C7C;
+	background: none;
+	border: none;
+}
+
+
+
+
+
+
+/* 공용 모듈 - 버튼 *****/
+
+
+/***** 공용 모듈 - 메뉴 */
+.menu {}
+.menu ul {}
+.menu ul li {
+	font-size: 1em;
+	float: left;
+}
+.menu ul li:hover, .menu ul li.on {
+	font-size: 1em;
+	float: left;
+	border-bottom: 2px solid #33CCCC;
+}
+/* 공용 모듈 - 메뉴 *****/
+
+/***** 공용 모듈 - 사용자 */
+
+.user {
+	
+}
+.user img, .user_pic img, .user .username, .people_list .user_name
+{
+	cursor: pointer;
+}
+.userpic40 img {width: 40px;height: 40px; border-radius: 20px; }
+.userpic50 img {width: 50px;height: 50px; border-radius: 25px; }
+.userpic60 img {width: 60px;height: 60px; border-radius: 30px; }
+.userpic70 img {width: 70px;height: 70px; border-radius: 35px; }
+.userpic120 img {width: 120px;height: 120px; border-radius: 60px; }
+
+/* 공용 모듈 - 사용자 *****/
+
+
+
+
+
+
+/***** 공용 모듈 - 스크롤바 */
+/*
+https://css-tricks.com/almanac/properties/s/scrollbar/
+https://css-tricks.com/custom-scrollbars-in-webkit/
+*/
+.nawa_scrollbars {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}	
+.nawa_scrollbars::-webkit-scrollbar {
+   width: 6px;
+}
+.nawa_scrollbars::-webkit-scrollbar-track-piece {
+  background-color: #fff;  
+}
+.nawa_scrollbars::-webkit-scrollbar-thumb {
+  background-color: #CCCCCC;
+  border-radius: 3px;
+}
+/* 공용 모듈 - 스크롤바 *****/
+
+
+
+
+/***** 공용 모듈 - 파일업로드 */
+
+.upload {
+	position: relative;
+    overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.upload:before {
+	content: '';
+	display: block;
+}
+/*
+#signup_form .upload:before {
+	content: '';
+	display: block;
+	margin: 25px 5px;
+	width: 60px;
+	height: 20px;
+	background: #fff url('/img/button_upload60.png') no-repeat;
+}
+#signup_form .upload:after {
+	content: '사진업로드';
+	display: block;
+	margin: 25px 5px;
+	width: 58px;
+	height: 18px;
+	font-size: 0.7em;
+	text-align: center;
+	color: #AFAFAF;
+	border: 1px solid #AFAFAF;
+	background: #fff;
+}
+*/
+.upload input {
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* 공용 모듈 - 파일업로드 *****/
+
+
+
+
+
+
+
+
+
+
+/***** 공용 모듈 - 레이어 */
+
+
+.layer {
+	display:none;
+	position: fixed;
+	top: 150px;
+	left: 50%;
+	width: 335px;
+	margin-left: -167px;
+	border-top-left-radius : 5px;
+	border-top-right-radius : 5px;
+	background-color: #fff;
+	overflow: hidden;
+	z-index: 9100;	
+}
+
+
+.layer .layer_header {
+	position: relative;
+	padding-top: 1px;
+	height: 90px;
+	border-top-left-radius : 5px;
+	border-top-right-radius : 5px;
+	background: #33CCCC url('/img/icon_layer_title.png') 50% 15px no-repeat;
+
+
+}
+.layer .layer_header.on:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+    background-color: #000;
+    background: #29A3A3 url('/img/icon_layer_title.png') 50% 15px no-repeat;
+	border: 0;
+	cursor: pointer;
+
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+
+
+}
+.layer .layer_header .layer_message {
+	position: relative;
+	text-align: center;
+	margin-top: -50px;
+	font-size: 0.9em;
+	color: #FFFFFF;
+}
+
+.layer_content_wrap {
+	margin: 0 auto;
+	width: 300px;
+}
+
+.layer_menu {
+	margin: 20px auto;
+	width: 190px;
+	height: 30px;
+}
+.layer_menu div {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	cursor: pointer;
+	font-size: 0.9em;
+	text-align: center;
+}
+.layer_menu div.on {
+	border-bottom: 1px solid #C4C4C4;
+}
+
+
+.layer_content_wrap form {
+	clear: both;
+}
+.layer_content_wrap form input {
+	margin-bottom: 20px;
+	padding: 0 10px;
+	width: 280px;
+	height: 40px;
+	color: #7C7C7C;
+	font-size: 0.9em;
+	border: 0;
+	background-color: #E0E0E0;
+	border-radius: 3px;
+}
+.layer_content_wrap form input:focus,
+.layer_content_wrap form input.on {
+	background-color: #fff;
+}
+
+.layer_buttons {
+	clear: both;
+	position: relative;
+	margin-top: 10px;
+	height: 40px;
+	text-align: center;
+}
+
+
+/* 공용 모듈 - 레이어 *****/
+
+
+
+/***** 로그인/회원가입 레이어 */
+
+
+#login_layer {
+	height: 360px;
+}
+
+button.facebook {
+	height: 30px;
+	padding-left: 35px;
+	text-align: right;
+	font-size: 0.85em;
+	background: #29569C url('/img/icon_facebook.png') 10px 100% no-repeat;
+}
+
+button.facebook_short {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#find_pw {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+
+#signup_layer {
+	height: 670px;
+}
+#signup_layer.position_fixing {
+	position: absolute;
+	top: auto;
+	bottom: 10px;
+}
+.facebook_login {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+
+#signup_form .upload {
+	margin: 15px auto;
+    width: 70px;
+    height: 70px;
+    background: url('/img/userpic/userpic70_.png');
+}
+#signup_form .upload:before {
+	width: 60px;
+	height: 20px;
+	background: #fff url('/img/button_upload60.png') no-repeat;
+}
+
+
+
+
+/* 로그인/회원가입 레이어 *****/
+
+
+
+
+
+
+/***** 공용 모듈 - 성별선택 */
+
+
+.select_gender {}
+.select_gender .select_gender_label {
+	float: left;
+}
+.select_gender .select_gender_content {
+	float: right;
+}
+.select_gender .select_gender_content div {
+	float: left;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+.gender_male {
+    background: url('/img/icon_gender_male.png');
+}
+.gender_male:hover, .gender_male.on {
+    background: url('/img/icon_gender_male_on.png');
+}
+.gender_female {
+    background: url('/img/icon_gender_female.png');
+}
+.gender_female:hover, .gender_female.on {
+    background: url('/img/icon_gender_female_on.png');
+}
+
+/* 공용 모듈 - 성별선택 *****/
+
+
+
+
+
+
+/***** 공용 모듈 - 탭메뉴 */
+
+
+.tab_title_list {
+	position: relative;
+	display: flex;
+	margin: 0 auto;
+	width: 944px;
+	height: 60px;
+	
+}
+.tab_title_list li {
+	flex: 1;
+	cursor: pointer;
+	text-align: center;
+	border-right: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+}
+.tab_title_list li.on {
+	border-bottom: 2px solid #33CCCC;
+}
+.tab_title_list li:last-child {
+	border-right: 0;
+}
+
+.project_edit {
+	margin: 0 auto;
+	width: 944px;
+	background-color: #FFFFFF;
+}
+#user_activity .tab_title_list {height: 80px;}
+#user_activity .tab_title_list li.on:nth-child(1){background:url('/img/bgicon_profile_tab_project.png') 50% 50% no-repeat;}
+#user_activity .tab_title_list li.on:nth-child(2){background:url('/img/bgicon_profile_tab_following.png') 50% 50% no-repeat;}
+#user_activity .tab_title_list li.on:nth-child(3){background:url('/img/bgicon_profile_tab_follower.png') 50% 50% no-repeat;}
+
+
+.tab_title_list li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.tab_title_list li a > div {
+	display: block;
+
+}
+
+.tab_title_list li .tab_title {
+	position: relative;
+	margin-top: 10px;
+	line-height: 30px;
+}
+.tab_title_list li .number {
+}
+
+
+
+/* 공용 모듈 - 탭메뉴 *****/
+
+
+
+/***** 공용 모듈 - 결과 목록 */
+
+
+.result_list {
+	position: relative;
+	display: block;
+	clear: both;
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 700px;
+}
+
+
+.result_list .result_title {
+	margin-left: 10px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 0.9em;
+}
+.result_list ul {
+	overflow: auto;
+}
+.result_list ul li {
+	display: block;
+	float: left;	
+	margin: 1px;
+	margin-top: 10px;
+	width: 340px;
+	box-shadow: 0px 0px 1px #888888;
+}
+.result_list ul li:nth-child(odd) {	
+	margin-right: 15px;
+}
+
+.result_list ul li .result_list_title {
+	width: 300px;
+	margin: 0 auto;
+	height: 45px;
+	line-height: 45px;
+}
+
+.result_list ul li .img_area {
+	width: 300px;
+	margin: 0 auto;
+}
+.result_list ul li .img_area img {
+	width: 300px;
+	height: 230px;
+}
+
+.result_list ul li .result_info {
+	width: 300px;
+	margin: 0 auto;
+}
+.result_list ul li .result_info .nums_of_member {
+	width: 40%;
+	height: 35px;
+	float: left;
+}
+.result_list ul li .result_info .nums_of_member .joined {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.result_list ul li .result_info .nums_of_member .admitted {
+	font-size: 0.8em;
+}
+.result_list ul li .result_info .dday {
+	width: 40%;
+	height: 35px;
+	float: right;
+	text-align: right;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.result_list ul li .result_info .progress {
+	clear: both;
+	width: 100%;
+	height: 6px;
+	background-color: #E0E0E0;
+	
+}
+.result_list ul li .result_info .progress .progress_value {
+	width: 50%;
+	height: 6px;
+	background-color: #33CCCC;
+}
+
+.result_list ul li .result_info .action_area button.setting {
+	display: block;
+}
+.result_list ul li .result_info .action_area button.disable {
+	display: none;
+}
+
+.result_list ul li.ended .result_info .nums_of_member,
+.result_list ul li.ended .result_info .dday {
+	/* display: none; */
+	visibility: hidden;
+}
+.result_list ul li.ended .result_info .action_area button.setting {
+	display: none;
+}
+.result_list ul li.ended .result_info .action_area button.disable {
+	display: block;
+}
+.result_list ul li.ended .result_info .progress .progress_value {
+	background-color: #7C7C7C;
+}
+.result_list ul li .result_info .project_info {
+	float: left;
+	margin: 10px 0;
+	height: 40px;
+	line-height: 40px;
+	color: #AFAFAF;
+	font-size: 0.8em;
+}
+.result_list ul li .result_info .project_info > div {
+	display: inline;
+}
+.result_list ul li .result_info .action_area {
+	float: right;
+	margin: 10px 0;
+	height: 40px;
+	line-height: 40px;
+}
+.result_list ul li .result_info .action_area button {
+	height: 30px;
+	font-size: 0.8em;
+}
+
+
+
+
+/* 공용 모듈 - 결과 목록 *****/
+
+
+/***** 공용 모듈 - 사용자 목록 */
+
+
+.people_list {
+	position: relative;
+	display: block;
+	width: 700px;
+	margin: 40px auto;
+	padding-bottom: 50px;
+	overflow: auto;
+}
+
+.people_list ul {
+	width: 100%;
+	display: block;
+	overflow: auto;
+}
+.people_list ul li {
+	position: relative;
+	display: block;	
+	float: left;
+	margin: 1px;
+	margin-top: 20px;
+	width: 340px;
+	height: 100px;
+	box-shadow: 0px 0px 1px #888888;
+}
+.people_list ul li:nth-child(odd) {
+	margin-right: 15px;	
+}
+
+.people_list ul li > div {
+	float: left;
+	line-height: 100px;
+}
+.people_list ul li .user_pic {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+.people_list ul li .user_pic img {
+	margin-top: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+.people_list ul li .user_name {}
+.people_list ul li .action_area {
+	float: right;
+	margin-right: 20px;
+}
+.people_list ul li .action_area button {
+	height: 35px;
+	font-size: 0.9em;
+	margin-left: 5px;
+}
+.people_list ul li .action_area button:nth-child(1) {
+	margin:0;
+}
+.people_list ul li .action_area button.adsf {}
+
+.project_edit .people_list ul li .user_pic {width: 90px;}
+.project_edit .people_list ul li .action_area {margin-right: 10px;}
+
+/* 공용 모듈 - 사용자 목록 *****/
+
+
+
+
+
+
+
+
+
+
+/* 전체 페이지 wrapper */
+#nawa_wrap {}
+
+
+/***** 상단 헤더 */
+#nawa_header {
+	position: relative;
+	display: block;
+	background-color: #FFFFFF;
+}
+#nawa_header_wrap {
+	position: relative;
+	display: block;	
+	margin: 0 auto;
+    width: 1280px;
+    height: 60px;
+	background-color: #FFFFFF;
+}
+#nawa_header_wrap > div {
+	float: left;
+	height: 60px;
+	line-height: 60px;
+}
+
+/* 로고 */
+#logo {
+	width: 80px;
+	height: 60px;
+}
+
+/***** 메인메뉴 */
+#main_menu {
+}
+#main_menu ul {
+}
+#main_menu ul li {
+	margin-left: 50px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 1.1em;
+}
+/* 메인메뉴 *****/
+
+/***** 상단 우측 검색,로그인 등 기능 버튼 */
+#nawa_header_wrap > div#login_action {
+	float: right;
+}
+#login_action ul {}
+#login_action ul li {
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	height: 60px;
+	line-height: 60px;
+	cursor: pointer;
+}
+#login_action ul li img {
+	margin-top: 10px;
+}
+
+#notification_number {
+	position: absolute;
+	display: block;
+	top: 15px;
+	left: 23px;
+	padding: 4px 7px;
+	height: 13px;
+	line-height: 13px;
+	background-color: #0068B7;
+	font-size: 13px;
+	color: #FFFFFF;
+	border-radius: 13px;
+}
+
+#search_query {
+	width: 280px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 1em;
+}
+/* 상단 우측 검색,로그인 등 기능 버튼 *****/
+
+
+/***** 알림창 */
+
+.noti_data {display:none;}
+
+#notification_wrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 420px;
+	height: 100%;
+   z-index:200;
+	background-color: #fff;
+}
+#notification_wrap.on {
+	display: block;
+}
+#notification_wrap .header {
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	background-color: #33CCCC;
+}
+#notification_wrap .header img {
+	margin-top: 10px;
+	width: 45px;
+	height: 45px;
+}
+
+#notification_wrap .notification_menu {
+	margin: 20px auto;
+	width: 200px;
+	height: 30px;
+}
+#notification_wrap .notification_menu div {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+#notification_wrap .notification_menu div.on {
+	border-bottom: 1px solid #C4C4C4;
+}
+
+
+#notification_wrap .notification_list {
+	margin: 0 auto;
+	width: 410px;
+	height: 450px;
+
+
+}
+#notification_wrap .notification_list ul {
+	margin: 0 auto;
+	width: 370px;
+}
+
+#notification_wrap .notification_list ul li {
+	clear: both;
+	height: 100px;
+
+	border-bottom: 1px solid #E0E0E0;
+}
+#notification_wrap .notification_list ul li:last-child {
+	border: 0;
+}
+
+#notification_wrap .notification_list ul li .image_area {
+	float: left;
+	height: 100px;
+	line-height: 100px;
+}
+#notification_wrap .notification_list ul li .image_area img {
+	margin: 20px;
+}
+
+#notification_wrap .notification_list ul li .content_area {
+
+}
+
+
+#notification_wrap .notification_list ul li .content_area .notification_function {
+	float: right;
+	margin-left: 20px;
+	width: 55px;
+	height: 100px;
+	line-height: 100px;
+}
+#notification_wrap .notification_list ul li .content_area .notification_function button {
+	width: 50px;
+	text-indent: -9999px;
+	font-size: 0;
+	overflow: hidden;
+	color: #FFFFFF;
+	background: url('/img/icon_follow.png') 50% 50% no-repeat;
+}
+#notification_wrap .notification_list ul li .content_area .notification_content {
+	padding-top: 30px;
+	padding-right: 20px;
+	height: 70px;
+	font-size: 0.9em;
+}
+
+#notification_wrap .notification_list ul li .content_area .notification_content .noti_bold {
+	font-weight: bold;
+}
+
+
+/* 알림창 *****/
+
+
+
+
+
+
+
+
+
+
+ 
+/* 상단 헤더 *****/
+
+
+
+ 
+/***** 메인 컨텐츠 */
+#nawa_contents {
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 40px;
+    width: 1280px;
+}
+
+
+#nawa_contents_title {
+	margin-top: 50px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+#nawa_contents_wrap {
+
+}
+
+/* 메인 컨텐츠 *****/
+
+
+/***** 검색결과 */
+
+.search_result {
+	margin: 0 auto;
+	padding-bottom: 60px;
+	width: 944px;
+	background-color: #fff;
+}
+
+.search_result_title {
+	height: 40px;
+	line-height: 40px;
+	font-size: 0.85em;
+	text-align: center;
+	color: #fff;
+	background-color: #AFAFAF;
+}
+.search_result_title span {
+	color: #fff;
+}
+.search_result_title span.search_value {
+	font-size: 1.2em;
+}
+
+/* 검색결과 *****/
+
+
+
+.findpw {
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 495px;
+	height: 220px;
+	text-align: center;
+	font-size: 0.9em;
+	color: #7C7C7C;
+	background-color: #fff;	
+}
+.findpw_wrap_title {
+	margin-bottom: 40px;
+	padding-top: 40px;
+}
+.findpw label {
+	margin-right: 60px;
+	font-size; 0.8em;
+	color: #AFAFAF;
+}
+.findpw input {
+	width: 248px;
+	height: 37px;
+	line-height: 37px;
+	border: 0;
+	border-radius: 3px;
+	background-color: #E0E0E0;
+}
+
+
+
+#nawa_contents_wrap > .action_area {
+	margin-top: 40px;
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+	background-color: #F2F2F
+}
+#nawa_contents_wrap > .action_area button {
+	margin-left: 15px;
+}

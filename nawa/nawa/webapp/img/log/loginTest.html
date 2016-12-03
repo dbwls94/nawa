@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title></title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <style type="text/css">
+  #container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  .border { background:  #36D7B6; position: absolute;  }
+  .borderh { height: 10px; border: 2px solid black;  border-color: #36D7B6; }
+  .borderv { width: 10px; border: 2px solid black;  border-color: #36D7B6; }
+
+  #topbar {   
+    left: 0px; top: 0px; 
+  }
+  #rightbar {
+    right: 0px; top: 0px; 
+  }
+  #bottombar {   
+    right: 0px; bottom: 0px; 
+  }
+  #leftbar {
+    left: 0px; bottom: 0px;   
+  }
+  #content {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      /* border-divs are 0px wide with 1px border all around, thus have a width & height of 2px (twice the border-width) -- 2 border-divs = 4 less pixels for the content ! */
+      width: 316px;
+      height: 236px;
+      background: whitesmoke;
+      overflow: auto;
+      text-shadow: 0 0 1px #555;
+      text-align: justify;
+  }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="border borderh" id="topbar"></div>
+    <div class="border borderv" id="rightbar"></div>
+    <div class="border borderh" id="bottombar"></div>
+    <div class="border borderv" id="leftbar"></div>
+  <!--   <div id="content">
+      <p>.</p>
+    </div> -->
+  </div>
+
+  <script type="text/javascript">
+
+$(function() {
+    $(".border, #content").hide();
+    $("#topbar").show();
+    $("#topbar").animate({width: "496px",   '-webkit-border-radius':'70px'},1000, function() {
+      $("#rightbar").show();
+      $("#rightbar").animate({height: "496px",    borderTopLeftRadius: 100, 
+    borderTopRightRadius: 100, 
+    borderBottomLeftRadius: 100, 
+    borderBottomRightRadius: 100,},1000, function() {
+        $("#bottombar").show();
+        $("#bottombar").animate({width: "496px" , borderTopLeftRadius: 100, 
+    borderTopRightRadius: 100,  borderBottomLeftRadius: 100, 
+    borderBottomRightRadius: 100,},1000, function() {
+          $("#leftbar").show();
+          $("#leftbar").animate({height: "496px" ,borderTopLeftRadius: 100, 
+    borderTopRightRadius: 100, 
+    borderBottomLeftRadius: 100,borderBottomRightRadius: 100,},1000, function() {
+            $("#content").fadeIn(1000);
+          });
+        });
+      });
+    });
+  });
+
+</script>
+</body>
+</html>

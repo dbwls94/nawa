@@ -1,0 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	padding-top: 70px;
+}
+hr.divider-light {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 2px;
+	margin-left: 2px;
+}

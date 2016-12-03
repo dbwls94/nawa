@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\nawa\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1268594433.index
+2385612296.index
+4091955727.index
+3100246297.index
+2221558281.index
+3781274571.index

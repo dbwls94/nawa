@@ -1,0 +1,249 @@
+@CHARSET "UTF-8";
+body{
+	    margin:0px;
+
+}
+
+/*  --------------------navbar--------------------*/
+	.navbar-top{
+  width:100%;
+  height:60px;
+  background: #f1f1f1;
+  z-index:1;
+  float:left;
+  margin:0;
+  position:fixed;
+
+}
+
+.navbar-search{
+
+
+}
+
+input[type="search"]{
+  width:500px;
+  height:30px;
+  margin: 15px 10px 0px 150px;
+  border-radius:15px; 
+  	border:none;
+  }
+  input[type="button"]{
+  width:100px;
+  height:40px;
+  background:#3b5998;
+  font-size:20px;
+  color:#fff;
+  cursor:pointer;
+  border:none;
+}
+
+.nav-profile{
+
+  margin:20px;
+
+}
+.navbar-top .profile-img{
+
+  width:50px;
+  height:50px;
+  border-radius:50px;
+  cursor:pointer;
+  position:fixed;
+  margin:5px;
+}
+.profile-name{
+  margin-left:70px;
+
+}
+
+.nav-friend{
+margin-left: 400px;
+}
+.nav-arlam{
+margin-left: 100px;
+}
+.nav-project-add{
+  background:#3b5998; 
+  color:#fff;
+  margin-left: 100px;
+  position:fixed;
+  height:40px;
+  width:200px;
+  margin-top:10px;
+  text-align:center;
+  line-height:40px;
+  text-decoration: none;
+}
+
+/*  --------------------end--------------------*/
+/*  --------------------project-list--------------------*/
+
+
+.project-list{
+   width:70%;
+   height:600px;
+  margin:100px 300px ;
+  background:#f0f0f0;
+  position: fixed;
+  
+}
+.list-name{
+  
+   position:fixed;
+   width: 915px;
+   height:50px;
+   background: #fff;
+   margin-left: 150px;
+   margin-top: 50px;
+
+
+}
+.list-name-title{
+  margin:5px;
+}
+.list-img{
+  width:500px;
+  height:400px;
+  margin-left:150px;
+  margin-top:120px;
+  float:left;
+
+}
+
+.list-member{
+
+  background:#fff;
+  width:400px;
+  height:120px;
+  float: right;
+  margin-right:280px;
+  margin-top:120px;
+
+}
+
+.list-member-number{
+  margin:5px 5px 30px 5px;
+}
+
+.list-member-img{
+   width:50px;
+   height:50px;
+
+}
+.list-member-img-list{
+   margin:10px;
+}
+
+/*  project list */
+.list-calendar{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+
+.list-calendar{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+.list-place{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+
+.list-end{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+
+.list-end{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+.list-money{
+
+  background:#fff;
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+}
+/*----------------------------*/
+.list-button-menu{
+
+ 
+  width:400px;
+  height:50px;
+  float: right;
+  margin-right:280px;
+  margin-top:10px;
+
+
+}
+.list-button-change{
+  background:#3b5998; 
+  color:#fff;
+  position:fixed;
+  height:40px;
+  width:130px;
+  margin-top:10px;
+  text-align:center;
+  line-height:40px;
+  text-decoration: none;
+  margin:5px 5px 5px 0px ;
+}
+.list-button-invite{
+  background:#3b5998; 
+  color:#fff;
+  position:fixed;
+  height:40px;
+  width:130px;
+  margin-top:10px;
+  text-align:center;
+  line-height:40px;
+  text-decoration: none;
+  margin:5px 5px 5px 135px;
+}
+.list-button-delete{
+  background:#3b5998; 
+  color:#fff;
+  position:fixed;
+  height:40px;
+  width:130px;
+  margin-top:10px;
+  text-align:center;
+  line-height:40px;
+  text-decoration: none;
+  margin:5px 5px  5px 270px;
+}

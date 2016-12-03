@@ -1,0 +1,551 @@
+@CHARSET "UTF-8";
+
+
+
+/***** 프로젝트 찾기 - 프로젝트 목록 */
+
+
+#projectList > li {
+	clear: both;
+	position: relative;
+	display: block;
+	margin-top: 40px;
+}
+
+.comments {
+	display: none;
+}
+
+
+
+.creator_info {
+	position: absolute;
+	display: block;
+	width: 160px;
+	height: 100%;
+	text-align: center;
+}
+
+
+
+
+.project_info {
+	position: relative;
+	display: block;
+	margin-left: 160px;
+	width: 940px;
+	/* overflow: auto; */
+	background-color: #FFFFFF;
+}
+
+.project_title {
+	position: relative;
+	display: block;
+	margin: 0 40px;
+	height: 30px;
+}
+
+.project_title h3 {
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	height: 30px;
+	line-height: 30px;
+}
+.project_title .dday {
+	float: right;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.project_image {
+	clear: both;
+	float: left;
+	display: block;
+	margin-left: 40px;
+	margin-right: 30px;
+	width: 380px;
+	height: 300px;
+}
+
+.project_image img {
+	width: 380px;
+	height: 300px;
+}
+
+.project_data {
+	position: relative;	
+	display: block;
+	float: left;
+	width: 455px;
+	/* overflow: auto; */
+}
+
+
+.member_nums {
+	margin-top: 30px;
+}
+
+.joined_member {float: left;}
+.admitted_member {float: right;}
+.member_nums .number {
+	font-size: 2em;
+	font-size: 2em;
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.progress {
+	clear: both;
+	width: 100%;
+	height: 6px;
+	background-color: #E0E0E0;
+}
+.progress .progress_value {
+	width: 50%;
+	height: 6px;
+	background-color: #33CCCC;
+}
+
+
+
+.joined_member_list {
+	margin-top: 10px;
+	height: 60px;
+	overflow: auto;
+}
+.joined_member_list li {
+	float: left;
+	height: 60px;
+	margin-left: 10px;
+}
+.see_more_member {
+	line-height: 60px;
+	font-size: 40px;
+	color: #AFAFAF;
+	letter-spacing: -10px;
+	cursor: pointer;
+}
+
+.member_list_total {
+	/* display: none; */
+	display: none;
+	position: absolute;
+	top: 94px;
+	left: 247px;
+	width: 410px;
+	height: 280px;
+
+	z-index: 10;
+	box-shadow: 2px 2px 15px #ccc;
+	background-color: #fff;
+}
+
+.member_list_total .title_area .title_icon {
+	width: 60px;
+	float: left;
+	margin-left: 3px;
+}
+.member_list_total .title_area .title_text {
+	float: right;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+.member_list_total ul {
+	clear: both;
+	display: block;
+	margin-left: 40px;
+	margin-right: 30px;
+	height: 200px;
+}
+.member_list_total ul li {
+	float: left;
+	margin-right: 8px;
+	width: 60px;
+	height: 90px;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+.project_type {
+	clear: both;
+	float: right;
+	margin-top: -30px;
+	font-size: 0.9em;
+}
+.project_data dl {
+	clear: both;
+	padding-top: 10px;
+	width: 100%;
+	overflow: auto;
+	font-size: 0.8em;
+	border-top: 1px solid #E0E0E0;
+}
+
+.project_data dl > * {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+.project_data dl dt {	
+	width: 30%;
+}
+.project_data dl dd {
+	width: 70%;
+	text-align: right;
+}
+
+.project_info button {
+	float: right;
+	margin-bottom: 40px;
+	width: 85px;
+	height: 40px;
+}
+
+.project_memo {
+	display: none;
+	clear: both;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	width: 860px;
+	border-top: 1px solid #E0E0E0;
+}
+#project_detail .project_memo {
+	display: block;
+}
+
+.project_memo_title {
+	margin: 20px;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+.see_more {
+	clear: both;
+	margin-left: 160px;
+	width: 940px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #E0E0E0;
+	cursor: pointer;
+}
+
+
+.button_comment_open {
+	cursor: pointer;
+}
+
+
+/***** 코멘트 */
+
+.comments {
+	display: none;
+	position: absolute;
+	bottom: 195px;
+	width: 360px;
+	height: auto;
+	padding-bottom: 10px;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow: 5px 5px 40px #ccc;
+}
+.comments.on {
+	display: block;
+}
+.comments .comments_title {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 1.1em;
+	color: #fff;
+	border-radius: 3px 3px 0 0;
+	background: #33CCCC url('/img/icon_reply_title.png') 135px 50% no-repeat;
+}
+
+.comments .comments_contents {
+	margin: 5px auto;
+	width: 350px;
+	height: auto;	
+	max-height: 595px;
+}
+
+
+
+.comments .comments_contents ul {
+	margin: 0 auto;
+	width: 320px;
+}
+.comments .comments_contents ul li {
+	position: relative;
+	padding: 20px 0;
+	width: 320px;
+	font-size: 0.9em;
+}
+.comments .comments_contents ul li img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
+.comments .comments_contents ul li .comments_writer {
+	margin-left: 70px;
+}
+.comments .comments_contents ul li .comments_time {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	font-size: 0.8em;
+	color: #B5B5B5;
+}
+.comments .comments_contents ul li .comments_action {
+	position: absolute;
+	display: none;
+	top: 20px;
+	right: 0;
+	width: 55px;
+	height: 20px;
+	text-align: right;
+	background-color: #FFFFFF;
+}
+.comments .comments_contents ul li.on .comments_action {
+	display: block;
+}
+.comments .comments_contents ul li .comments_action img {
+	position: relative;
+	float: inherit;
+	margin-left: 5px;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+.comments .comments_contents ul li .comments_content {
+	margin-left: 70px;
+	margin-right: 30px;
+}
+
+.comments .comments_contents > ul > li {
+	border-bottom: 1px solid #E0E0E0;
+}
+.comments .comments_contents > ul > li:last-child {
+	border: 0;
+}
+
+.comments .comments_contents ul li.depth2 {
+	margin-left: 15px;
+}
+.comments .comments_contents ul li.depth2 {
+	padding: 10px 0;
+	width: 305px;
+}
+.comments .comments_contents ul li.depth2 > img {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+
+.comments input {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	padding: 0 10px;
+	width: 320px;
+	height: 40px;
+	font-size: 0.9em;
+	border: 1px solid #E0E0E0;
+	border-radius: 3px;
+	background-color: #E0E0E0;
+}
+
+.comments input.edit_comment {
+	margin-top: 10px;
+	width: 215px;
+	height: 35px;
+}
+
+.comments .comments_contents ul li .reply_area {
+	margin-left: 15px;
+}
+.comments .comments_contents ul li .reply_area ul li {
+	padding-bottom: 0;
+	width: 305px;
+}
+.comments .comments_contents ul li .reply_area ul li img {
+	float: left;
+	width: 40px;
+	height: 40px;
+}
+.reply_area input {
+	margin-left: 60px;
+	width: 230px;
+	font-size: 1.1em;
+}
+
+.comments input:focus,
+.comments input.on {
+	background-color: #fff;
+}
+/* 코멘트 *****/
+
+
+
+
+
+/* 프로젝트 찾기 - 프로젝트 목록 *****/
+
+
+#project_detail {
+	position: relative;
+	padding-bottom: 40px;
+}
+
+
+
+/***** 새 프로젝트 만들기 */
+
+#project_create_form {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	width: 944px;
+	background-color: #fff;
+	/* border: 1px solid #E0E0E0; */
+}
+
+
+#project_create_form input {
+	background-color: #E0E0E0;
+	border: 0;
+	border-radius: 3px;	
+}
+
+#project_header_area, #project_info_area {
+	margin: 0 auto;
+	width: 920px;
+	text-align: center;
+}
+#project_header_area {
+	padding-top: 40px;
+}
+
+#project_name {
+	width: 865px;
+	height: 45px;
+}
+
+#project_info_area {
+	margin-top: 30px;
+	height: 350px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+#project_info_area > div {
+	float: left;
+}
+
+
+#project_info_area .upload {
+	margin-left: 25px;
+    width: 380px;
+    height: 300px;
+    border: 1px solid #E0E0E0;
+}
+#project_info_area .upload:before {
+	width: 130px;
+	height: 35px;
+	background: #fff url('/img/button_upload130.png') no-repeat;
+}
+
+
+#info_area {
+	width: 485px;
+    height: 300px;
+}
+
+.checkbox_area {
+	margin-top: 25px;
+	text-align: right;
+}
+.checkbox_area input {
+	margin-right: 10px;
+	width: 17px;
+	height: 17px;
+	color: red;
+}
+.checkbox_area label {
+	float: right;
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+
+
+#info_area > label {
+	clear: both;
+	float: left;
+	margin-top: 15px;
+	margin-left: 30px;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+	font-size: 0.85em;
+	color: #AFAFAF;
+}
+#info_area > input {
+	float: right;
+	margin-top: 15px;
+	padding: 0 10px;
+	width: 350px;
+	height: 35px;
+	color: #AFAFAF;
+	text-align: right;
+}
+
+
+
+#project_contents_area {
+	margin: 0 auto;
+	width: 865px;
+	margin-top: 30px;
+	text-align: center;
+}
+
+#project_contents_area input, #project_contents_area textarea {
+	margin-top: 30px;
+	width: 100%;
+	background-color: #f5f5f5;
+	border: 0;
+	border-radius: 3px;
+}
+
+
+#project_contents_area input {
+	height: 45px;
+	text-align: center;
+	font-size: 1.8em;
+	font-weight: bold;
+}
+#project_contents_area textarea {
+	margin-bottom: 20px;
+	max-width: 100%;
+	min-height: 400px;
+	font-size: 1em;
+}
+
+
+
+
+/* 새 프로젝트 만들기 *****/
